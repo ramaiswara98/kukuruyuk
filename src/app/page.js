@@ -1,8 +1,11 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import BangJago from '../../public/image/bangjago.jpg'
+import { useEffect } from 'react';
 
 export default function Home() {
+  
   return (
     <main className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center p-6 font-sans">
       
@@ -63,10 +66,29 @@ export default function Home() {
 
       </div>
 
-      <footer className="mt-20 text-orange-300 text-sm font-bold uppercase tracking-widest text-center">
-         <p className='text-xs'>Di Buat dengan males oleh @rama_iswara7 😮‍💨</p>
-        Ditenagai oleh Energi Jagung 🌽
+      <footer className="mt-20 text-orange-300 text-sm font-bold  tracking-widest text-center">
+          <a
+        href="https://trakteer.id/rama_iswara7/tip"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-4 m-auto bottom-6 w-fit   z-50 bg-[#be1e2d] hover:bg-red-700 text-white px-5 py-3 rounded-full shadow-xl flex items-center gap-3 font-bold transition-all hover:scale-105 active:scale-95"
+      >
+        <img
+          src="https://edge-cdn.trakteer.id/images/embed/trbtn-icon.png?v=14-05-2025"
+          alt="Trakteer"
+          className="w-4 h-6 animate-bounce"
+        />        
+        <p className='w-fit text-xs'>Beliin Admin Kopikap 👈</p>
+      </a>
+      <a
+        href='/donatur'
+        className='mb-4 text-red-400 underline'
+      >Cek Daftar Sultan Disini!</a>
+      <p className='text-xs uppercase mt-4'>Di Buat dengan males oleh @rama_iswara7 😮‍💨</p>
+      <p className='text-xs uppercase'> Ditenagai oleh Energi Jagung 🌽</p>      
       </footer>
+      
+
     </main>
   );
 }
