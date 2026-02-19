@@ -10,34 +10,29 @@ export default function RiwayatDonatur() {
   const API_KEY = "trapi-dnsB8a8V5V1vG7zV0DcV4gud";
   const ENDPOINT = "https://api.trakteer.id/v1/public/supports?limit=50";
 
-  useEffect(() => {
-    const fetchDonatur = async () => {
-      try {
-        const response = await fetch(ENDPOINT, {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/json',
-            'key': API_KEY, // Trakteer API menggunakan header 'key'
-          }
-        });
+  // Di dalam useEffect pada app/donatur/page.js
 
-        if (!response.ok) throw new Error('Gagal mengambil data donatur');
-        
-        const json = await response.json();
-        
-        // Filter hanya yang statusnya "success"
-        const successData = json.result.data.filter(item => item.status === "success");
+useEffect(() => {
+  const fetchDonatur = async () => {
+    try {
+      // Panggil API buatan kita sendiri (Internal Route)
+      const response = await fetch('/api/trakteer');
+        console.log("food");
+      if (!response.ok) throw new Error('Gagal mengambil data donatur');
+      
+      const json = await response.json();
+      console.log("makan"+json);
+        const successData = json.result.data
         setDonatur(successData);
-      } catch (err) {
-        console.error(err)
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchDonatur();
-  }, []);
+  fetchDonatur();
+}, []);
 
   return (
     <main className="min-h-screen bg-[#020617] text-white p-6 flex flex-col items-center">
@@ -76,11 +71,11 @@ export default function RiwayatDonatur() {
                         {item.creator_name || "Hamba Allah"}
                       </h3>
                       <p className="text-[10px] text-slate-500 font-bold uppercase">
-                        {item.quantity} {item.unit_name} • Rp {item.amount.toLocaleString('id-ID')}
+                        {item.quantity} {item.unit_name} 
                       </p>
                     </div>
                     <div className="bg-yellow-500/10 text-yellow-500 text-[10px] font-black px-3 py-1 rounded-full border border-yellow-500/20">
-                      SUCCESS
+                      Rp {item.amount.toLocaleString('id-ID')}
                     </div>
                   </div>
                   
@@ -91,8 +86,6 @@ export default function RiwayatDonatur() {
                   )}
                   
                   <div className="mt-3 text-[9px] text-slate-600 font-bold flex gap-3">
-                    <span>MENGGUNAKAN {item.payment_method}</span>
-                    <span>•</span>
                     <span>{new Date(item.updated_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                   </div>
                 </div>

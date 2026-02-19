@@ -28,6 +28,20 @@ const daftarKuis = [
     deskripsi: "Mungkin kamu sebenarnya adalah remot TV?",
     ikon: "📺",
     warna: "border-blue-400"
+  },
+  {
+    id: "debat-kusir",
+    judul: "Debat Kusir",
+    deskripsi: "Voting hal - hal yang nggak berfaedah dalam hidup lu",
+    ikon: "🗣️",
+    warna: "border-blue-400"
+  },
+  {
+    id: "uji-nasib",
+    judul: "Uji Nasib",
+    deskripsi: "Voting hal - hal yang nggak berfaedah dalam hidup lu",
+    ikon: "🗣️",
+    warna: "border-blue-400"
   }
 ];
 
