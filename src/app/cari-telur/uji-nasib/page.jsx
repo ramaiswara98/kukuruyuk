@@ -77,7 +77,7 @@ export default function UjiNasib() {
 
   return (
     <main className="min-h-screen bg-[#020617] text-white p-6 flex flex-col items-center justify-center">
-      <Link href="/adu-jago" className="absolute top-6 left-6 text-slate-500 font-bold hover:text-white transition">← KABUR</Link>
+      <Link href="/cari-telur" className="absolute top-6 left-6 text-slate-500 font-bold hover:text-white transition">← KABUR</Link>
 
       <div className="w-full max-w-md bg-slate-900/50 border-2 border-slate-800 p-8 rounded-[3rem] shadow-2xl relative overflow-hidden">
         

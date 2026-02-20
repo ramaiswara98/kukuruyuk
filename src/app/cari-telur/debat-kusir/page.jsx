@@ -180,7 +180,7 @@ export default function DebatKusir() {
     <main className="min-h-screen bg-[#020617] text-white p-6 flex flex-col items-center justify-center">
       {/* Header */}
       <div className="w-full max-w-md mb-10 flex justify-between items-center">
-        <Link href="/adu-jago" className="text-slate-500 font-black text-xs hover:text-white transition">← KABUR</Link>
+        <Link href="/cari-telur" className="text-slate-500 font-black text-xs hover:text-white transition">← KABUR</Link>
         <span className="bg-red-600 px-3 py-1 rounded-full text-[10px] font-black italic animate-pulse">LIVE DEBAT</span>
       </div>
 

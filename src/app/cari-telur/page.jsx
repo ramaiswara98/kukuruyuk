@@ -34,14 +34,14 @@ const daftarKuis = [
     judul: "Debat Kusir",
     deskripsi: "Voting hal - hal yang nggak berfaedah dalam hidup lu",
     ikon: "🗣️",
-    warna: "border-blue-400"
+    warna: "border-gray-400"
   },
   {
     id: "uji-nasib",
     judul: "Uji Nasib",
     deskripsi: "Voting hal - hal yang nggak berfaedah dalam hidup lu",
-    ikon: "🗣️",
-    warna: "border-blue-400"
+    ikon: "🔮",
+    warna: "border-green-400"
   }
 ];
 
