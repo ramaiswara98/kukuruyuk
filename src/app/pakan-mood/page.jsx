@@ -226,6 +226,7 @@ export default function PakanMood() {
               // { id: 'memes', label: 'Random Meme', icon: '🖼️', sub: 'Dopamin instan' },
               { id: 'fakta', label: 'Fakta Unik/Aneh', icon: '🕵️', sub: 'Biar nggak kuper' },
               { id: 'ramalan', label: 'Ramalan Nasib', icon: '🔮', sub: 'Cek keberuntunganmu' },
+              { id: 'love-meter', label: 'Love Meter', icon: '💗', sub: 'Periksa Kecocokanmu' },
             ].map((item) => (
               <button 
                 key={item.id} 

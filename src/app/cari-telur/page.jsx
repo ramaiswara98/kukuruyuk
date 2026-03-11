@@ -42,6 +42,13 @@ const daftarKuis = [
     deskripsi: "Voting hal - hal yang nggak berfaedah dalam hidup lu",
     ikon: "🔮",
     warna: "border-green-400"
+  },
+   {
+    id: "love-meter",
+    judul: "Love Meter",
+    deskripsi: "Periksa kecocokan lu dengan pasangan",
+    ikon: "💗",
+    warna: "border-pink-400"
   }
 ];
 
